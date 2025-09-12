@@ -1,0 +1,14 @@
+{
+    "workbench.colorTheme": "Monokai",
+    "yaml.schemas": {
+        "kubernetes": ".yaml"
+    
+    },
+    "security.workspace.trust.untrustedFiles": "open",
+    "git.autofetch": true,
+    "terminal.integrated.fontFamily": "MesloLGS Nerd Font Mono",
+    "azureTerraform.survey": {
+        "surveyPromptDate": "2025-09-06T14:39:32.118Z",
+        "surveyPromptIgnoredCount": 0
+    }
+}
