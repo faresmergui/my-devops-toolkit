@@ -1,4 +1,4 @@
-# 🛠️ MY-DEVOPS-TOOLKIT
+# 🛠️ My DevOps Toolkit
 
 > **Personal DevOps configuration toolkit** to quickly reinstall a complete development environment on a new workstation with focus on **Kubernetes, Terraform, and Cloud automation**.
 
