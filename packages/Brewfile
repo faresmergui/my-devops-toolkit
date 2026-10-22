@@ -1,0 +1,87 @@
+# Paquets macOS. Installés par chezmoi (voir home/.chezmoiscripts),
+# ou à la main : brew bundle --file=packages/Brewfile
+
+# ---- Taps ----
+tap "hashicorp/tap"
+tap "terraform-docs/tap"
+
+# ---- DevOps & cloud ----
+brew "awscli"
+brew "kubernetes-cli"                 # kubectl
+brew "helm"
+brew "minikube"
+brew "k9s"
+brew "kubectx"
+brew "hashicorp/tap/terraform"
+brew "terraform-docs"
+brew "ansible"
+brew "podman"
+
+# ---- Shell ----
+brew "zsh-autosuggestions"
+brew "zsh-syntax-highlighting"
+brew "starship"                       # prompt
+brew "carapace"                       # complétions
+brew "zellij"                         # onglets, splits, sessions
+brew "thefuck"
+brew "chezmoi"                        # dotfiles
+
+# ---- CLI ----
+brew "bat"
+brew "eza"
+brew "fd"
+brew "fzf"
+brew "ripgrep"
+brew "zoxide"
+brew "git"
+brew "git-delta"
+brew "git-lfs"
+brew "lazygit"
+brew "jq"
+brew "yq"
+brew "curl"
+brew "wget"
+brew "tlrc"                           # tldr
+brew "htop"
+brew "sshs"                           # menu SSH
+
+# ---- Éditeurs & langages ----
+brew "neovim"
+brew "tree-sitter"
+brew "python@3.12"
+brew "pipx"
+brew "node"
+
+# ---- Build (à évaluer) ----
+brew "autoconf"
+brew "xcodegen"
+
+# ---- Applications ----
+cask "ghostty"
+cask "font-meslo-lg-nerd-font"
+cask "visual-studio-code"
+cask "obsidian"
+cask "raycast"
+cask "karabiner-elements"
+cask "jordanbaird-ice"                # barre de menus
+cask "dockdoor"
+cask "finetune"
+cask "only-switch"
+cask "multipass"
+
+# ---- Extensions VS Code ----
+vscode "alefragnani.project-manager"
+vscode "eamodio.gitlens"
+vscode "formulahendry.auto-rename-tag"
+vscode "gruntfuggly.todo-tree"
+vscode "hediet.vscode-drawio"
+vscode "lewxdev.vscode-glyph"
+vscode "mikestead.dotenv"
+vscode "ms-azuretools.vscode-containers"
+vscode "ms-kubernetes-tools.vscode-kubernetes-tools"
+vscode "ms-vscode-remote.remote-containers"
+vscode "ms-vscode.remote-explorer"
+vscode "nichabosh.minimalist-dark"
+vscode "pkief.material-icon-theme"
+vscode "redhat.vscode-yaml"
+vscode "wayou.vscode-todo-highlight"

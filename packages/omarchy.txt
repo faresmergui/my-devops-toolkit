@@ -1,0 +1,21 @@
+# Paquets ajoutés par-dessus Omarchy (pacman). Une ligne par paquet.
+# Liste provisoire : à confirmer lors de l'inventaire d'Omarchy,
+# beaucoup de ces outils sont peut-être déjà fournis.
+zsh
+zsh-autosuggestions
+zsh-syntax-highlighting
+starship
+zellij
+eza
+bat
+fd
+ripgrep
+fzf
+zoxide
+git-delta
+git-lfs
+lazygit
+jq
+go-yq
+htop
+carapace-bin

@@ -1,0 +1,7 @@
+# Alias qui dépendent du système
+{{- if eq .chezmoi.os "darwin" }}
+alias ports='lsof -iTCP -sTCP:LISTEN -n -P'
+{{- else }}
+alias free='free -h'
+alias ports='ss -tuln'
+{{- end }}

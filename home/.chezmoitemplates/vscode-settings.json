@@ -1,0 +1,6 @@
+{
+    "workbench.colorTheme": "Minimal",
+    "workbench.iconTheme": "material-icon-theme",
+    "git.autofetch": true,
+    "terminal.integrated.fontFamily": "MesloLGS Nerd Font Mono"
+}
