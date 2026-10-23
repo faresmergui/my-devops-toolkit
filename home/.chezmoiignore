@@ -1,0 +1,19 @@
+{{- /* Ce qui n'est PAS déployé selon la machine. */ -}}
+
+{{ if not .isMac }}
+Library
+.config/karabiner
+.config/ghostty
+{{ end }}
+
+{{ if .isOmarchy }}
+{{- /* Omarchy gère lui-même ces fichiers. On n'y touche pas avant l'inventaire d'Omarchy. */}}
+.bashrc
+.bash_profile
+.config/nvim
+.config/starship.toml
+{{ end }}
+
+{{ if ne .chezmoi.os "linux" }}
+.config/Code
+{{ end }}

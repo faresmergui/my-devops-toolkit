@@ -1,0 +1,14 @@
+{{- /* Généré une fois par machine au `chezmoi init`. Relancer `chezmoi init` pour le régénérer. */ -}}
+{{- $email := promptStringOnce . "email" "Email Git pour cette machine" "fares.mergui26@gmail.com" -}}
+{{- $omarchy := and (eq .chezmoi.os "linux") (stat (joinPath .chezmoi.homeDir ".local/share/omarchy")) -}}
+
+sourceDir = {{ .chezmoi.sourceDir | dir | quote }}
+
+[data]
+  name = "FaresMrg"
+  email = {{ $email | quote }}
+  isMac = {{ eq .chezmoi.os "darwin" }}
+  isOmarchy = {{ if $omarchy }}true{{ else }}false{{ end }}
+
+[diff]
+  exclude = ["scripts"]

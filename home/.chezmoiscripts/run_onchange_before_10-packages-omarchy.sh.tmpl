@@ -1,0 +1,9 @@
+{{- if .isOmarchy -}}
+#!/bin/bash
+# Installe les paquets Omarchy (Arch). Relancé automatiquement quand la liste change.
+# omarchy.txt sha256 : {{ include (joinPath .chezmoi.workingTree "packages/omarchy.txt") | sha256sum }}
+set -euo pipefail
+
+grep -vE '^\s*(#|$)' {{ joinPath .chezmoi.workingTree "packages/omarchy.txt" | quote }} \
+  | sudo pacman -S --needed --noconfirm -
+{{ end -}}
