@@ -58,6 +58,7 @@ Shell aliases live in `home/dot_config/zsh/`, one file per topic (`k8s.zsh`, `te
 
 ## Docs
 
+- [Trying it safely without touching the current setup](docs/tester-sans-risque.md)
 - [Migrating an existing Mac](docs/migration-mac.md)
 - [Adding a tool](docs/ajouter-un-outil.md)
 
