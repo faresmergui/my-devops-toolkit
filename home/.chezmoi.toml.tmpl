@@ -1,5 +1,5 @@
 {{- /* Généré une fois par machine au `chezmoi init`. Relancer `chezmoi init` pour le régénérer. */ -}}
-{{- $email := promptStringOnce . "email" "Email Git pour cette machine" "fares.mergui26@gmail.com" -}}
+{{- $email := promptStringOnce . "email" "Email Git pour cette machine" "44775892+faresmergui@users.noreply.github.com" -}}
 {{- $omarchy := and (eq .chezmoi.os "linux") (stat (joinPath .chezmoi.homeDir ".local/share/omarchy")) -}}
 
 sourceDir = {{ .chezmoi.sourceDir | dir | quote }}
