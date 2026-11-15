@@ -1,0 +1,7 @@
+# Keeps the pinned GitHub Actions up to date. The repository has no package
+# manifest Dependabot understands (Homebrew and lazy.nvim are not supported).
+version: 2
+updates:
+  - package-ecosystem: github-actions
+    directory: /
+    schedule: { interval: monthly }
