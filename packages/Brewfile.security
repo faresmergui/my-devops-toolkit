@@ -1,0 +1,5 @@
+# Outils de sécurité, installés à la demande :
+#   brew bundle --file=packages/Brewfile.security
+# À revoir lors de la phase « config sécurité ».
+brew "nikto"
+cask "burp-suite"

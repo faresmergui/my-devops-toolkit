@@ -1,0 +1,7 @@
+# PATH et variables de session : chargé une seule fois, au login.
+{{- if .isMac }}
+eval "$(/opt/homebrew/bin/brew shellenv)"
+{{- end }}
+
+# Outils installés par pipx
+export PATH="$PATH:$HOME/.local/bin"

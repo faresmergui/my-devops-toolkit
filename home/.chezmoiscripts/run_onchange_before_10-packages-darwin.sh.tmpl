@@ -1,0 +1,15 @@
+{{- if .isMac -}}
+#!/bin/bash
+# Installe les paquets Homebrew. Relancé automatiquement quand le Brewfile change.
+# Brewfile sha256 : {{ include (joinPath .chezmoi.workingTree "packages/Brewfile") | sha256sum }}
+set -euo pipefail
+
+if ! command -v brew >/dev/null 2>&1; then
+  /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+  eval "$(/opt/homebrew/bin/brew shellenv)"
+fi
+
+# --adopt : reprend les applis déjà installées hors Homebrew au lieu d'échouer
+export HOMEBREW_CASK_OPTS="--adopt"
+brew bundle --file={{ joinPath .chezmoi.workingTree "packages/Brewfile" | quote }}
+{{ end -}}

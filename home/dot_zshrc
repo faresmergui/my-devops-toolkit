@@ -1,0 +1,31 @@
+# ~/.zshrc : géré par chezmoi. Modifier avec `ce ~/.zshrc` (voir docs/).
+# Les réglages sont rangés par thème dans ~/.config/zsh/.
+
+# ---- Zellij au démarrage (sauf dans VS Code et en SSH) ----
+if [[ -o interactive && -z "$ZELLIJ" && -z "$SSH_CONNECTION" && "$TERM_PROGRAM" != "vscode" ]] \
+  && command -v zellij >/dev/null; then
+  zellij
+fi
+
+for f in history completion fzf aliases os k8s terraform aws containers git chezmoi; do
+  [[ -r "$HOME/.config/zsh/$f.zsh" ]] && source "$HOME/.config/zsh/$f.zsh"
+done
+
+# ---- Plugins (Homebrew sur macOS, pacman sur Arch) ----
+for dir in /opt/homebrew/share /usr/share/zsh/plugins /usr/share; do
+  [[ -r $dir/zsh-autosuggestions/zsh-autosuggestions.zsh ]] \
+    && source $dir/zsh-autosuggestions/zsh-autosuggestions.zsh && break
+done
+# syntax-highlighting doit être chargé après tout le reste, sauf zoxide
+for dir in /opt/homebrew/share /usr/share/zsh/plugins /usr/share; do
+  [[ -r $dir/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh ]] \
+    && source $dir/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh && break
+done
+
+# ---- Prompt ----
+command -v starship >/dev/null && eval "$(starship init zsh)"
+
+# ---- Zoxide (better cd) : doit rester en dernier ----
+eval "$(zoxide init zsh)"
+alias cd="z"
+alias cdi="zi" # Interactive mode

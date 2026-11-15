@@ -1,0 +1,24 @@
+# Prompt Starship, identique sous zsh et bash, sur macOS et Linux.
+# Doc : https://starship.rs/config/
+"$schema" = 'https://starship.rs/config-schema.json'
+
+add_newline = true
+
+[directory]
+truncation_length = 3
+
+# Contexte Kubernetes affiché seulement dans un dossier qui en parle,
+# pour éviter de l'avoir partout.
+[kubernetes]
+disabled = false
+detect_files = ["k8s", "kustomization.yaml", "Chart.yaml", "helmfile.yaml"]
+format = '[⎈ $context( \($namespace\))]($style) '
+
+[aws]
+format = '[$symbol($profile )(\($region\) )]($style)'
+
+[terraform]
+format = '[$symbol$workspace]($style) '
+
+[cmd_duration]
+min_time = 2_000

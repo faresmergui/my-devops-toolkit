@@ -1,0 +1,35 @@
+# Ghostty : reprise à l'identique de l'ancienne conf WezTerm.
+# Doc des options : `ghostty +show-config --default --docs`
+
+font-family = MesloLGS Nerd Font Mono
+font-size = 19
+
+background = #011423
+foreground = #CBE0F0
+cursor-color = #47FF9C
+cursor-text = #011423
+selection-background = #033259
+selection-foreground = #CBE0F0
+
+palette = 0=#214969
+palette = 1=#E52E2E
+palette = 2=#44FFB1
+palette = 3=#FFE073
+palette = 4=#0FC5ED
+palette = 5=#a277ff
+palette = 6=#24EAF7
+palette = 7=#24EAF7
+palette = 8=#214969
+palette = 9=#E52E2E
+palette = 10=#44FFB1
+palette = 11=#FFE073
+palette = 12=#A277FF
+palette = 13=#a277ff
+palette = 14=#24EAF7
+palette = 15=#24EAF7
+
+background-opacity = 0.9
+background-blur = 10
+macos-titlebar-style = hidden
+
+copy-on-select = clipboard
