@@ -1,7 +1,7 @@
 # ---- FZF -----
 
 # Set up fzf key bindings and fuzzy completion
-eval "$(fzf --zsh)"
+command -v fzf >/dev/null && eval "$(fzf --zsh)"
 
 # --- setup fzf theme ---
 fg="#CBE0F0"

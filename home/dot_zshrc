@@ -26,6 +26,8 @@ done
 command -v starship >/dev/null && eval "$(starship init zsh)"
 
 # ---- Zoxide (better cd) : doit rester en dernier ----
-eval "$(zoxide init zsh)"
-alias cd="z"
-alias cdi="zi" # Interactive mode
+if command -v zoxide >/dev/null; then
+  eval "$(zoxide init zsh)"
+  alias cd="z"
+  alias cdi="zi" # Interactive mode
+fi
